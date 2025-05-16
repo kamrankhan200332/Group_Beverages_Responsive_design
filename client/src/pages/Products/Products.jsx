@@ -7,17 +7,10 @@ import Navbar from "../../components/Navbar/Navbar";
 import aboutBg from "../../assets/images/aboutBg.png";
 
 const About = () => {
-  const style = {
-    color: "#27348B",
-  };
-
-  const borderBottom = {
-    borderBottom: "1px solid gray",
-  };
   return (
     <div>
       <div>
-        <Navbar style={style} borderBottom={borderBottom} />
+        <Navbar />
       </div>
 
       <div className="px-[75px] space-y-10 py-[30px]">

@@ -191,7 +191,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="h-[50px] border"></div>
+      <div className="h-[65px]"></div>
     </div>
   );
 };
