@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logo.png";
 import { Link, useLocation } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
-  // const [color, setColor] = useState("/");
+  const [showMenu, setShowMenu] = useState(false);
   const location = useLocation();
-  console.log(location.pathname);
+
   return (
     <>
       <header
@@ -13,21 +15,25 @@ const Navbar = () => {
           location.pathname === "/" ? "border-b-white" : "border-b-black"
         } `}
       >
-        <nav className="flex items-center justify-between w-[90%] m-auto py-[18px] px-[15px]">
+        <nav className="flex items-center justify-between w-[90%] m-auto py-[18px]">
           <Link to={"/"}>
-            <img src={logo} alt="logo" />
+            <div className=" w-[60px] sm:w-[102px]">
+              <img src={logo} className="w-full" alt="logo" />
+            </div>
           </Link>
-          <div>
+          <div className="">
             <ul
-              className={`flex items-center p-[8px] gap-[40px] uppercase ${
-                location.pathname === "/" ? "text-white" : "text-[#27348B]"
+              className={`absolute md:static md:min-h-fit left-0 min-h-[50vh] top-[-100%] w-full md:w-auto flex md:items-center px-5 flex-col md:flex-row md:bg-transparent bg-[#27348B] p-[15px] gap-[20px] md:gap-[35px] uppercase ${
+                location.pathname === "/"
+                  ? "text-white"
+                  : "md:text-[#27348B] text-white"
               }
               }  font-semibold`}
             >
               <li
                 className={`${
                   location.pathname === "/about" &&
-                  " bg-[#27348B] py-1 px-2 text-white rounded"
+                  " md:bg-[#27348B] md:py-1 md:px-2 text-white md:rounded"
                 }`}
               >
                 <Link to={"/about"}>About us</Link>
@@ -35,7 +41,7 @@ const Navbar = () => {
               <li
                 className={`${
                   location.pathname === "/services" &&
-                  " bg-[#27348B] py-1 px-2 text-white rounded"
+                  " md:bg-[#27348B] md:py-1 md:px-2 text-white md:rounded"
                 }`}
               >
                 <Link to={"/services"}>services</Link>
@@ -43,23 +49,15 @@ const Navbar = () => {
               <li
                 className={`${
                   location.pathname === "/products" &&
-                  " bg-[#27348B] py-1 px-2 text-white rounded"
+                  " md:bg-[#27348B] md:py-1 md:px-2 text-white md:rounded"
                 }`}
               >
                 <Link to={"/products"}>products</Link>
               </li>
               <li
                 className={`${
-                  location.pathname === "/careers" &&
-                  " bg-[#27348B] py-1 px-2 text-white rounded"
-                }`}
-              >
-                <Link to={"/careers"}>careers</Link>
-              </li>
-              <li
-                className={`${
                   location.pathname === "/distributors" &&
-                  " bg-[#27348B] py-1 px-2 text-white rounded"
+                  " md:bg-[#27348B] md:py-1 md:px-2 text-white md:rounded"
                 }`}
               >
                 <Link to={"/distributors"}>distributors</Link>
@@ -67,12 +65,26 @@ const Navbar = () => {
               <li
                 className={`${
                   location.pathname === "/contact" &&
-                  " bg-[#27348B] py-1 px-2 text-white rounded"
+                  " md:bg-[#27348B] md:py-1 md:px-2 text-white md:rounded"
                 }`}
               >
                 <Link to={"/contact"}>contact</Link>
               </li>
             </ul>
+          </div>
+          <div
+            className={`burger text-xl cursor-pointer md:hidden ${
+              location.pathname === "/" ? "text-white" : "text-[#27348B]"
+            }`}
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            {showMenu ? (
+              <div className="text-2xl">
+                <IoMdClose />
+              </div>
+            ) : (
+              <GiHamburgerMenu />
+            )}
           </div>
         </nav>
       </header>

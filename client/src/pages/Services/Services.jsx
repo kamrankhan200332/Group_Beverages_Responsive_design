@@ -16,9 +16,9 @@ const Services = () => {
         <Navbar />
       </div>
 
-      <div className="px-[75px]">
+      <div className="px-4 md:px-10 lg:px-[75px]">
         <nav className="py-[30px]">
-          <ul className="flex items-center gap-5 ">
+          <ul className="flex flex-col sm:flex-row gap-4">
             <li>
               <button
                 className={`uppercase font-bold text-[#27348B] text-xl cursor-pointer ${

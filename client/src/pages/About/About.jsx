@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import aboutBg1 from "../../assets/images/aboutBg1.png"
+import aboutBg1 from "../../assets/images/aboutBg1.png";
 
 const About = () => {
   return (
@@ -8,9 +8,9 @@ const About = () => {
       <div>
         <Navbar />
       </div>
-      <div className="px-[75px] ">
-        <div className="py-[75px] space-y-4 ">
-          <h1 className="uppercase text-[35px] font-bold text-[#27348B]">
+      <div className="px-4 md:px-10 lg:px-[75px]">
+        <div className="py-[20px] sm:py-[30px] md:py-[40px]  space-y-4 ">
+          <h1 className="uppercase  font-bold text-[#27348B] text-xl sm:text-2xl md:text-3xl lg:text-4xl ">
             AVA Group Beverages Pakistan
           </h1>
           <p className="text-[#636CA6] font-medium text-justify">
@@ -40,20 +40,16 @@ const About = () => {
           </p>
         </div>
       </div>
+
       <div className="">
         <div
-          className="image"
+          className={`image bg-cover bg-center bg-no-repeat`}
           style={{
             backgroundImage: `url(${aboutBg1})`,
-            height: "100vh",
-            width: "100%",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="px-[75px] w-[50%] flex justify-center h-full flex-col space-y-2">
-            <h1 className="uppercase text-[26px] font-bold text-[#27348B]">
+          <div className="px-4 md:px-10 lg:px-[75px] w-[50%] py-5 flex justify-center h-full flex-col space-y-2">
+            <h1 className="uppercase text-xl sm:text-2xl md:text-3xl font-bold text-[#27348B]">
               Mission & VISION
             </h1>
             <p className="text-[#636CA6] font-medium text-justify">
@@ -66,7 +62,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="h-[65px]"></div>
+        <div className="h-[40px] md:h-[50px]"></div>
       </div>
     </div>
   );
