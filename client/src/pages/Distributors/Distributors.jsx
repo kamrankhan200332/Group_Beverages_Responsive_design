@@ -16,22 +16,18 @@ const Distributors = () => {
         <Navbar />
       </div>
       <div
+        className="bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${distributorsBg})`,
-          height: "100vhk",
-          width: "100%",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="py-[60px] pb-[100px]">
-          <div className="flex items-center justify-between px-[75px] h-[100%]">
-            <div className="content w-[60%] space-y-3">
-              <h1 className="uppercase text-[40px] font-bold text-[#27348B] -mr-[45px]">
+        <div className="pb-[60px] py-[30px] lg:py-0">
+          <div className="px-4 md:px-10 lg:px-[75px] flex flex-col md:flex-row items-center justify-between h-[100%]">
+            <div className="content w-full md:w-[60%] space-y-3">
+              <h1 className="uppercase font-bold text-[#27348B] md:-mr-[45px] text-xl sm:text-2xl md:text-3xl lg:text-4xl">
                 Welcome to the ZOR Energy Stimulant Distributor Directory!
               </h1>
-              <p className="text-[#636CA6] font-medium">
+              <p className="text-[#636CA6] font-medium text-justify">
                 Looking for an authorized distributor of ZOR Energy products in
                 your region? Our distributor list provides you with contact
                 details for trusted sole distributors across the country.
@@ -46,76 +42,24 @@ const Distributors = () => {
                 best energy stimulant in the market".
               </p>
             </div>
-            <div className="image w-[40%]">
+            <div className="image w-full md:w-[40%]">
               <img src={sting7} alt="" />
             </div>
           </div>
 
-          <div className="px-[75px] space-y-10">
-            <div className="bg-white p-7 space-y-5 shadow-mdk shadow-[0_4px_12px_rgba(0,0,0,0.25)] flex items-center justify-between">
-              <div className="left space-y-6">
+          <div className="px-4 md:px-10 lg:px-[75px] space-y-10">
+            <div className="bg-white p-7 space-y-10 shadow-[0_4px_12px_rgba(0,0,0,0.25)] flex flex-col md:items-center md:flex-row justify-between">
+              <div className="left space-y-6 w-full md:w-[65%]">
                 <div className="flex items-center space-x-4">
                   <span>
                     <img src={filter} alt="icon" />
                   </span>
-                  <h1 className="uppercase text-[26px] font-bold text-[#27348B]">
-                    another distributor
-                  </h1>
-                </div>
-
-                <div className="space-x-5 flex">
-                  <div className="flex items-center space-x-2">
-                    <span className="">
-                      <img src={user} alt="" />
-                    </span>
-                    <p className="text-[#636CA6] font-medium">
-                      Prof Dr. Ali Ahmad
-                    </p>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-[#636CA6] text-xl">
-                      <img src={phone} alt="phoneIcon" />
-                    </span>
-                    <p className="text-[#636CA6] font-medium">+92 3459192796</p>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-[#636CA6] text-xl">
-                      <img src={location} alt="locationIcon" />
-                    </span>
-                    <p className="text-[#636CA6] font-medium">
-                      Mattani Toker Kheel
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="right space-y-6 flex items-center flex-col">
-                <button className="uppercase bg-[#27348B] text-white py-1 px-4 cursor-pointer">
-                  get in touch
-                </button>
-
-                <div className="flex items-center space-x-1.5">
-                  <span className="text-[#636CA6] text-xl">
-                    <img src={flag2} alt="flagImg" />
-                  </span>
-                  <p className="text-[#27348B] font-semibold uppercase">
-                    UZBEKISTAN
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-7 space-y-5 shadow-mdk shadow-[0_4px_12px_rgba(0,0,0,0.25)] flex items-center justify-between">
-              <div className="left space-y-6">
-                <div className="flex items-center space-x-4">
-                  <span>
-                    <img src={filter} alt="icon" />
-                  </span>
-                  <h1 className="uppercase text-[26px] font-bold text-[#27348B]">
+                  <h1 className="uppercase font-bold text-[#27348B] text-xl md:text-2xl lg:text-3xl">
                     CHILL ZONE FOOD & BEVERAGES
                   </h1>
                 </div>
 
-                <div className="space-x-5 flex">
+                <div className="gap-3 flex items-center justify-between flex-wrap">
                   <div className="flex items-center space-x-2">
                     <span className="">
                       <img src={user} alt="" />
@@ -130,7 +74,7 @@ const Distributors = () => {
                     </span>
                     <p className="text-[#636CA6] font-medium">+92 3119921465</p>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-1 md:space-x-0">
                     <span className="text-[#636CA6] text-xl">
                       <img src={location} alt="locationIcon" />
                     </span>
@@ -140,10 +84,12 @@ const Distributors = () => {
                   </div>
                 </div>
               </div>
-              <div className="right space-y-6 flex items-center flex-col">
-                <button className="uppercase bg-[#27348B] text-white py-1 px-4 cursor-pointer">
-                  get in touch
-                </button>
+              <div className="right md:space-y-6 flex items-center flex-row md:flex-col space-x-2 ">
+                <div>
+                  <button className="uppercase bg-[#27348B] text-white py-1 px-2 md:px-4 cursor-pointer">
+                    get in touch
+                  </button>
+                </div>
 
                 <div className="flex items-center space-x-1.5">
                   <span className="text-[#636CA6] text-xl">
@@ -151,6 +97,58 @@ const Distributors = () => {
                   </span>
                   <p className="text-[#27348B] font-semibold uppercase">
                     Pakistan
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-7 space-y-5 shadow-[0_4px_12px_rgba(0,0,0,0.25)] flex flex-col md:items-center md:flex-row justify-between">
+              <div className="left space-y-6 w-full md:w-[65%]">
+                <div className="flex items-center space-x-4">
+                  <span>
+                    <img src={filter} alt="icon" />
+                  </span>
+                  <h1 className="uppercase font-bold text-[#27348B] text-xl md:text-2xl lg:text-3xl">
+                    another distributor
+                  </h1>
+                </div>
+
+                <div className="gap-3 flex items-center justify-between flex-wrap">
+                  <div className="flex items-center space-x-2">
+                    <span className="">
+                      <img src={user} alt="" />
+                    </span>
+                    <p className="text-[#636CA6] font-medium">
+                      Prof Dr. Ali Ahmad
+                    </p>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-[#636CA6] text-xl">
+                      <img src={phone} alt="phoneIcon" />
+                    </span>
+                    <p className="text-[#636CA6] font-medium">+92 3459192796</p>
+                  </div>
+                  <div className="flex items-center space-x-1 md:space-x-0">
+                    <span className="text-[#636CA6] text-xl">
+                      <img src={location} alt="locationIcon" />
+                    </span>
+                    <p className="text-[#636CA6] font-medium">
+                      Mattani Toker Kheel
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="right md:space-y-6 flex items-center flex-row md:flex-col space-x-3">
+                <button className="uppercase bg-[#27348B] text-white py-1 px-2 md:px-4 cursor-pointer">
+                  get in touch
+                </button>
+
+                <div className="flex items-center space-x-1.5">
+                  <span className="text-[#636CA6] text-xl">
+                    <img src={flag2} alt="flagImg" />
+                  </span>
+                  <p className="text-[#27348B] font-semibold uppercase">
+                    UZBEKISTAN
                   </p>
                 </div>
               </div>
