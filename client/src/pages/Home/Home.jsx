@@ -81,34 +81,34 @@ const Home = () => {
         className="w-full bg-cover bg-center px-4 md:px-10 lg:px-[75px] py-[30px] space-y-10"
         style={{ backgroundImage: `url(${background1})` }}
       >
-        <h1 className="uppercase text-[41px] font-bold text-[#27348B] text-center">
+        <h1 className="uppercase font-bold text-[#27348B] text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl">
           Events
         </h1>
         <div className="cards gap-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <div className="card bg-white w-full">
             <img src={card1} className="w-full" alt="" />
-            <p className="p-[10px] text-justify">
+            <p className="p-[10px] text-justify text-[#636CA6] font-medium">
               Lorem ipsum dolor, sit amet consectetur emit adipisicing elit.
               Possimus, Lorem ipsum dolor sit amet consectetur adipisicing.
             </p>
           </div>
           <div className="card w-full bg-white">
             <img src={card2} className="w-full" alt="" />
-            <p className="p-[10px] text-justify">
+            <p className="p-[10px] text-justify text-[#636CA6] font-medium">
               Lorem ipsum dolor, sit amet consectetur emit adipisicing elit.
               Possimus, Lorem ipsum dolor sit amet consectetur adipisicing.
             </p>
           </div>
           <div className="card w-full bg-white">
             <img src={card3} className="w-full" alt="" />
-            <p className="p-[10px] text-justify">
+            <p className="p-[10px] text-justify text-[#636CA6] font-medium">
               Lorem ipsum dolor, sit amet consectetur emit adipisicing elit.
               Possimus, Lorem ipsum dolor sit amet consectetur adipisicing.
             </p>
           </div>
           <div className="card w-full bg-white">
             <img src={card4} className="w-full" alt="" />
-            <p className="p-[10px] text-justify">
+            <p className="p-[10px] text-justify text-[#636CA6] font-medium">
               Lorem ipsum dolor, sit amet consectetur emit adipisicing elit.
               Possimus, Lorem ipsum dolor sit amet consectetur adipisicing.
             </p>
@@ -122,10 +122,12 @@ const Home = () => {
       >
         <div className="flex flex-col lg:flex-row items-center justify-between text-white px-4 md:px-10 lg:px-[75px] py-10 gap-10">
           <div className="space-y-3 text-center lg:text-left w-full lg:w-1/2">
-            <h1 className="text-3xl md:text-5xl uppercase font-semibold leading-[52px]">
+            <h1 className="text-3xl md:text-5xl uppercase font-bold text-[#27348B] md:text-white leading-[52px]">
               leave us a <br /> message
             </h1>
-            <p>-feel free to contact us for any queries</p>
+            <p className="text-[#27348B] font-medium">
+              -feel free to contact us for any queries
+            </p>
           </div>
           <div className="form w-full max-w-md">
             <form>
@@ -159,7 +161,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="input border w-full">
-                  <button className="uppercase bg-blue-800 text-white hover:bg-blue-900 cursor-pointer w-full py-2">
+                  <button className="uppercase font-semibold bg-blue-800 text-white hover:bg-blue-900 cursor-pointer w-full py-2">
                     send message
                   </button>
                 </div>

@@ -17,7 +17,12 @@ const Navbar = () => {
       >
         <nav className="flex items-center justify-between w-[90%] m-auto py-[18px]">
           <Link to={"/"}>
-            <div className=" w-[60px] sm:w-[102px]">
+            <div
+              className={`${
+                location.pathname === "/" && "w-[60px] sm:w-[102px] "
+              }`}
+              onClick={() => setShowMenu(false)}
+            >
               <img src={logo} className="w-full" alt="logo" />
             </div>
           </Link>
@@ -27,8 +32,8 @@ const Navbar = () => {
                 showMenu
                   ? location.pathname === "/"
                     ? "top-[19%]"
-                    : "top-[14%]"
-                  : "top-[-100%]"
+                    : "top-[19%]"
+                  : "top-[-200%]"
               } transition-all duration-300 ease-in-out z-50 w-full md:w-auto flex md:items-center px-5 flex-col md:flex-row md:bg-transparent bg-[#27348B] p-[15px] gap-[20px] md:gap-[35px] uppercase ${
                 location.pathname === "/"
                   ? "text-white"
